@@ -6,14 +6,13 @@ import admin from "firebase-admin"; // Importar admin de firebase-
  
 config(); // Cargar variables de entorno desde el archivo .env
 
-//https://accesoapp-ed27c-default-rtdb.firebaseio.com
 
 const firebaseConfig = {
   credential: admin.credential.cert(
     {
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    projectId: process.env.project_id,
+    privateKey: process.env.private_key,
+    clientEmail: process.env.client_email,
   }
   ),
   apiKey: process.env.apiKey, 
